@@ -1,61 +1,142 @@
-# SkillSwap - Social Networking + Skill Exchange Platform
+# 🚀 SkillSwap – Peer-to-Peer Skill Exchange Platform
+SkillSwap is a full-stack web application that enables users to **learn, teach, and exchange skills collaboratively**.
+The platform connects individuals with complementary skills, creating a community-driven ecosystem for continuous learning.
 
-A repository for a full-stack MERN application that implements a social network and skill exchange system using explicit Data Structures and Algorithms for core features (Recommendations, Search, Ranking, etc.).
+---
 
-## Prerequisites
-- Node.js (v16+)
-- MongoDB (running locally or Atlas URI)
+## 🌟 Overview
 
-## Data Structures Used
-- **Directed Graph**: Modeling user relationships (Follow/Unfollow).
-- **BFS (Breadth-First Search)**: Shortest path friend recommendations.
-- **Trie (Prefix Tree)**: specific optimized storage for Skill Autocomplete.
-- **Priority Queue (Max Heap)**: Ranking skill providers by Karma points.
-- **Hash Maps / Sets**: O(1) lookups for active sessions, event participants, and caching.
+In today’s fast-paced world, learning new skills is essential. SkillSwap bridges the gap between **skill seekers and skill providers** by offering a platform where users can exchange knowledge without monetary barriers.
 
-## Getting Started
+Users can:
 
-### 1. Setup Backend
+* Offer skills they are good at
+* Learn new skills from others
+* Connect, collaborate, and grow together
+
+👉 The idea is based on **peer-to-peer learning**, where everyone can be both a teacher and a learner ([GitHub][1])
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+* ⚛️ React (Vite)
+* 🎨 HTML, CSS, JavaScript
+
+### Backend
+
+* 🟢 Node.js
+* 🚀 Express.js
+
+### Database
+
+* 🍃 MongoDB (or your DB if used)
+
+### Deployment
+
+* 🌐 Vercel (Frontend)
+
+---
+
+## ⚙️ Features
+
+* 👤 User Authentication (Signup/Login)
+* 🧑‍💼 User Profiles with Skills
+* 🔍 Skill Matching System
+* 🤝 Peer-to-Peer Skill Exchange
+* 📊 Dashboard for managing skills
+* 💬 (Optional) Chat / Interaction system
+
+---
+
+## 📂 Project Structure
+
+```text
+SkillSwap/
+├── frontend/      # React (Vite) frontend
+├── backend/       # Express backend
+├── README.md
+```
+
+---
+
+## 🚀 Getting Started
+
+### 🔹 1. Clone the Repository
+
 ```bash
-cd backend
-npm install
-# Create .env file (see .env.example)
-npm run seed  # Loads initial data
-npm run dev   # Starts server on port 5000
+git clone https://github.com/HithaGatiputi/SkillSwap.git
+cd SkillSwap
 ```
 
-### 2. Setup Frontend
+---
+
+### 🔹 2. Install Dependencies
+
 ```bash
-cd frontend
 npm install
-npm run dev   # Starts Vite server
 ```
 
-## Deployment
+---
 
-This application is ready to be deployed to production! See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed instructions on:
+### 🔹 3. Setup Environment Variables
 
-- Setting up MongoDB Atlas (free cloud database)
-- Deploying backend to Render
-- Deploying frontend to Render
-- Environment variable configuration
+Create `.env` files in both frontend and backend:
 
-**Quick Start**: The application is configured to deploy to Render with a single `render.yaml` file. Just push to GitHub and connect to Render!
+#### Backend `.env`
 
-## Environment Variables
-
-### Backend (.env)
-```
-MONGODB_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
+```env
 PORT=5000
-NODE_ENV=development
-FRONTEND_URL=http://localhost:3000
+MONGO_URI=your_mongodb_url
+JWT_SECRET=your_secret_key
 ```
 
-### Frontend (.env)
-```
-VITE_API_URL=http://localhost:5000
+#### Frontend `.env`
+
+```env
+VITE_BACKEND_URL=http://localhost:5000
 ```
 
-See `.env.example` files in both `backend/` and `frontend/` directories for templates.
+---
+
+### 🔹 4. Run the Project
+
+```bash
+npm run dev
+```
+
+👉 Frontend runs on:
+
+```text
+http://localhost:5173
+```
+
+---
+
+## 🌐 Deployment
+
+This project is deployed using **Vercel**.
+
+### Deploy via CLI:
+
+```bash
+vercel
+vercel --prod
+```
+
+---
+
+## 🎯 Use Case
+
+Example:
+
+* 👩‍🎨 A user knows **Graphic Design**
+* 👨‍💻 Another user wants to learn it but knows **Python**
+
+👉 SkillSwap connects them → both learn from each other
+
+
+
+
